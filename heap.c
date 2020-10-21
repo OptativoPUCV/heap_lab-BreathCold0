@@ -48,7 +48,7 @@ void heap_push(Heap* pq, void* data, int priority){
 }
 
 
-void heap_pop(Heap* pq){ /*
+void heap_pop(Heap* pq){
   heapElem aux;
   pq->size--;
   aux = pq->heapArray[0];
@@ -62,13 +62,15 @@ void heap_pop(Heap* pq){ /*
       pq->heapArray[axu] = pq->heapArray[son];
       pq->heapArray[son] = aux;
       axu = son;
-      son = 2*son+2;
-      if (son >= pq->size-1) {
-        son = axu;
+      //son = 2*son+2;
+      if (2*son+1 > 2*son+2) {
         son = 2*son+1;
       }
+      else {
+        son = 2*son+2;
+      }
     }
-  }*/
+  }
 }
 
 Heap* createHeap(){
