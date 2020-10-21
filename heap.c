@@ -51,9 +51,9 @@ void heap_push(Heap* pq, void* data, int priority){
 void heap_pop(Heap* pq){
   heapElem aux;
   pq->size--;
-  aux = pq->heapArray[pq->size];
-  pq->heapArray[pq->size] = pq->heapArray[0];
-  pq->heapArray[0] = aux;
+  aux = pq->heapArray[0];
+  pq->heapArray[0] = pq->heapArray[pq->size];
+  pq->heapArray[pq->size] = aux;
   int son = 2;
   int axu = 0;
   while (pq->heapArray[axu].priority < pq->heapArray[son].priority) {
