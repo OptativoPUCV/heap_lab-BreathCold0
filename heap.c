@@ -62,9 +62,9 @@ void heap_pop(Heap* pq){
     pq->heapArray[son] = aux;
     axu = son;
     son = (2*son)+1;
-    if(pq->capac <= son) {
+    /*if(pq->capac <= son) {
       son++;
-    }
+    }*/
   }
 }
 
