@@ -125,3 +125,9 @@ Wed Oct 21 19:59:18 UTC 2020:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 6983784
+Wed Oct 21 19:59:26 UTC 2020: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  7|1
+total_score: 50/70
+adaf185
