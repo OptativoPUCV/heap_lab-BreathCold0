@@ -52,8 +52,8 @@ void heap_pop(Heap* pq){
   heapElem aux;
   pq->size--;
   aux = pq->heapArray[0];
-  pq->heapArray[0] = pq->heapArray[pq->size];
-  pq->heapArray[pq->size] = aux;
+  pq->heapArray[0] = pq->heapArray[pq->size-1];
+  pq->heapArray[pq->size-1] = aux;
   if (pq->size != 0) {
   int son;
   if (pq->heapArray[2].priority < pq->heapArray[1].priority) {
