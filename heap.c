@@ -76,7 +76,9 @@ void heap_pop(Heap* pq){
         }
       }
       else {
-        son = 2*son+2;
+        if (2*son+2 < pq->size) {
+          son = 2*son+2;
+        }
       }
     }
   }
