@@ -63,6 +63,10 @@ void heap_pop(Heap* pq){
       pq->heapArray[son] = aux;
       axu = son;
       son = (2*son)+1;
+      if (son >= pq->size) {
+        son = axu;
+        son = (2*son)+1;
+      }
     }
   }
 }
