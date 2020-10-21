@@ -53,6 +53,6 @@ void heap_pop(Heap* pq){
 }
 
 Heap* createHeap(){
-  Heap * pq = (Heap*) malloc(sizeof(Heap)*3);
-   return pq;
+  Heap * h = (Heap*) malloc(sizeof(Heap)*3);
+   return h;
 }
